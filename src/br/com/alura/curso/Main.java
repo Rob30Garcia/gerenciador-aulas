@@ -1,6 +1,7 @@
 package br.com.alura.curso;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -13,6 +14,10 @@ public class Main {
         aulas.add(a1);
         aulas.add(a2);
         aulas.add(a3);
+
+        System.out.println(aulas);
+
+        Collections.sort(aulas);
 
         System.out.println(aulas);
     }
