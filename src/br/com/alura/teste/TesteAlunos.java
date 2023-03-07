@@ -31,5 +31,8 @@ public class TesteAlunos {
 
         //Aluno testandoAluno = new Aluno(null, 47967);
 
+        Aluno matriculadoEncontrado = javaColecoes.buscaMatriculado(5617);
+        System.out.println(matriculadoEncontrado);
+
     }
 }

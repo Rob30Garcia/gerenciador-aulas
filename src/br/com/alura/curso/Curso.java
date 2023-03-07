@@ -7,6 +7,7 @@ public class Curso {
     private String instrutor;
     private List<Aula> aulas = new LinkedList<>();
     private Set<Aluno> alunos = new HashSet<>();
+    private Map<Integer, Aluno> matriculaPorAluno = new HashMap<>();
 
     public Curso(String titulo, String instrutor) {
         this.titulo = titulo;
@@ -39,6 +40,12 @@ public class Curso {
 
     public void matricula(Aluno aluno) {
         this.alunos.add(aluno);
+
+        this.matriculaPorAluno.put(aluno.getNumeroMatricula(), aluno);
+    }
+
+    public Aluno buscaMatriculado(int numero) {
+        return this.matriculaPorAluno.get(numero);
     }
 
     @Override
