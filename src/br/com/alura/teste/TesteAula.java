@@ -1,9 +1,11 @@
-package br.com.alura.curso;
+package br.com.alura.teste;
+
+import br.com.alura.curso.Aula;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Main {
+public class TesteAula {
 
     public static void main(String[] args) {
         Aula a1 = new Aula("Revistando as ArrayList", 21);
