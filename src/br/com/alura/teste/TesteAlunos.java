@@ -29,5 +29,7 @@ public class TesteAlunos {
         System.out.println(turini.equals(a1));
         System.out.println(javaColecoes.estaMatriculado(turini));
 
+        //Aluno testandoAluno = new Aluno(null, 47967);
+
     }
 }
