@@ -46,4 +46,8 @@ public class Curso {
         return String.format("{ curso: %s, tempo total: %d, aulas: ", this.titulo, this.getTempoTotal())
                 + this.aulas + "}";
     }
+
+    public boolean estaMatriculado(Aluno a1) {
+        return this.alunos.contains(a1);
+    }
 }
