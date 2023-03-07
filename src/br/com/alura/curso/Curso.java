@@ -1,13 +1,12 @@
 package br.com.alura.curso;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Curso {
     private String titulo;
     private String instrutor;
     private List<Aula> aulas = new LinkedList<>();
+    private Set<Aluno> alunos = new HashSet<>();
 
     public Curso(String titulo, String instrutor) {
         this.titulo = titulo;
@@ -32,6 +31,14 @@ public class Curso {
 
     public int getTempoTotal() {
         return this.aulas.stream().mapToInt(Aula::getTempo).sum();
+    }
+
+    public Set<Aluno> getAlunos() {
+        return Collections.unmodifiableSet(this.alunos);
+    }
+
+    public void matricula(Aluno aluno) {
+        this.alunos.add(aluno);
     }
 
     @Override
